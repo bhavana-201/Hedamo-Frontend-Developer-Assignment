@@ -1,169 +1,106 @@
 const ProductDetails = [
-    {
-        "id": 1,
-        "name": "Hedamo Organic Honey",
-        "image": "/honey.jpg",
-        "alt": "honey bottle",
-        "category": "Food",
-        "description": "Pure wild honey harvested from organic farms.",
-        "shortDescription": "Natural wild honey from organic farms.",
-        "longDescription": "Harvested sustainably from wild hives, our honey is rich in nutrients and completely unprocessed.",
-        "features": ["Unprocessed", "Nutrient-rich", "Eco-friendly"],
-        "nutrition": {"calories": 70, "sugar": "15g"},
-        "traceability": {},
-        "reviews": []
-    },
-    {
-        "id": 2,
-        "name": "Grass-Fed Beef Steak",
-        "image": "/meat.jpg",
-        "alt": "red meat image",
-        "category": "Meat",
-        "description": "Premium grass-fed beef steak, ethically raised and hormone-free.",
-        "shortDescription": "Tender grass-fed beef steak.",
-        "longDescription": "Ethically raised without hormones, this high-protein beef delivers premium taste and quality.",
-        "features": ["Grass-fed", "No hormones", "High protein"],
-        "nutrition": {
-            "calories": 250,
-            "protein": "26g",
-            "fat": "18g",
-            "carbohydrates": "0g"
-        },
-        "traceability": {
-            "farm": "Green Pastures Ranch",
-            "location": "Montana, USA",
-            "harvest_date": "2025-08-10"
-        },
-        "reviews": []
-    },
-    {
-        "id": 3,
-        "name": "Organic Whole Milk",
-        "image": "/milk.jpg",
-        "alt": "milk packet",
-        "category": "Dairy",
-        "description": "Creamy whole milk from pasture-raised cows. No antibiotics or artificial hormones.",
-        "shortDescription": "Fresh organic whole milk.",
-        "longDescription": "Sourced from pasture-raised cows, our milk is creamy, healthy, and free from antibiotics or artificial hormones.",
-        "features": ["Pasture-raised", "No antibiotics", "Calcium-rich"],
-        "nutrition": {
-            "calories": 150,
-            "protein": "8g",
-            "fat": "8g",
-            "carbohydrates": "12g"
-        },
-        "traceability": {
-            "farm": "Daisy Fields Dairy",
-            "location": "Wisconsin, USA",
-            "bottling_date": "2025-08-20"
-        },
-        "reviews": []
-    },
-    {
-        "id": 4,
-        "name": "BotaniGlow Facial Serum",
-        "image": "/lip.jpg",
-        "alt": "lip balm image",
-        "category": "Beauty",
-        "description": "Hydrating serum made from botanical extracts and essential oils.",
-        "shortDescription": "Hydrating botanical facial serum.",
-        "longDescription": "Packed with natural extracts and essential oils, this serum nourishes and rejuvenates your skin.",
-        "features": ["Paraben-free", "Cruelty-free", "Vegan"],
-        "nutrition": null,
-        "traceability": {
-            "manufacturer": "Glow Labs",
-            "location": "California, USA",
-            "batch_number": "BGF205"
-        },
-        "reviews": []
-    },
-    {
-        "id": 5,
-        "name": "Organic Kale Bunch",
-        "image": "/eggs.jpg", // Update if needed
-        "alt": "eggs image",   // Update alt if needed
-        "category": "Veggies",
-        "description": "Freshly harvested organic kale, rich in vitamins and antioxidants.",
-        "shortDescription": "Fresh organic kale bunch.",
-        "longDescription": "Handpicked and pesticide-free, our kale is rich in vitamins, antioxidants, and perfect for healthy meals.",
-        "features": ["Non-GMO", "Pesticide-free", "Locally grown"],
-        "nutrition": {
-            "calories": 35,
-            "fiber": "2g",
-            "vitamin_C": "89mg",
-            "iron": "1.6mg"
-        },
-        "traceability": {
-            "farm": "Harvest Greens Co-op",
-            "location": "Oregon, USA",
-            "harvest_date": "2025-08-22"
-        },
-        "reviews": []
-    },
-    {
-        "id": 6,
-        "name": "Organic Blueberries",
-        "image": "/blueberries.jpg",
-        "alt": "blueberries image",
-        "category": "Fruits",
-        "description": "Juicy organic blueberries packed with antioxidants.",
-        "shortDescription": "Fresh organic blueberries.",
-        "longDescription": "Handpicked and antioxidant-rich, these blueberries are perfect for snacking, baking, or adding to smoothies.",
-        "features": ["Handpicked", "No preservatives", "Rich in antioxidants"],
-        "nutrition": {
-            "calories": 57,
-            "sugar": "10g",
-            "fiber": "2.4g",
-            "vitamin_C": "9.7mg"
-        },
-        "traceability": {
-            "farm": "Berry Bliss Farms",
-            "location": "Maine, USA",
-            "harvest_date": "2025-08-18"
-        },
-        "reviews": []
-    },
-    {
-        "id": 7,
-        "name": "Plant-Based Multivitamins",
-        "image": "/nuts.jpg",
-        "alt": "packed nuts image",
-        "category": "Supplements",
-        "description": "Daily multivitamin tablets made from organic fruits and vegetables.",
-        "shortDescription": "Organic plant-based multivitamins.",
-        "longDescription": "Made from fruits and vegetables, these multivitamins support daily health and wellness naturally.",
-        "features": ["Non-GMO", "Gluten-free", "No artificial additives"],
-        "nutrition": {
-            "vitamin_A": "900mcg",
-            "vitamin_D": "25mcg",
-            "iron": "8mg",
-            "zinc": "11mg"
-        },
-        "traceability": {
-            "manufacturer": "NutraPure Inc.",
-            "location": "Utah, USA",
-            "batch_number": "NPX458"
-        },
-        "reviews": []
-    },
-    {
-        "id": 8,
-        "name": "EcoCotton T-Shirt",
-        "image": "/clothess.jpg",
-        "alt": "clothes image",
-        "category": "Clothes",
-        "description": "Sustainable t-shirt made from 100% organic cotton.",
-        "shortDescription": "Eco-friendly cotton t-shirt.",
-        "longDescription": "Made from 100% organic cotton, this t-shirt is sustainable, comfortable, and ethically produced.",
-        "features": ["Organic cotton", "Fair trade", "Biodegradable packaging"],
-        "nutrition": null,
-        "traceability": {
-            "manufacturer": "EarthWear Apparel",
-            "location": "India",
-            "batch_number": "ECO-TSH2025"
-        },
-        "reviews": []
-    }   
+  {
+    id: 1,
+    name: "Organic Basmati Rice",
+    alt: "A sack of premium basmati rice",
+    category: "Agriculture",
+    price: 1200,
+    image: "/basmati.jpg",
+    longDescription:
+      "Naturally grown, long-grain basmati rice with a rich aroma. Ideal for biryani, pulao, and everyday meals.",
+    features: ["100% organic", "Non-GMO", "Aged for 12 months"],
+    nutrition: { calories: 365, sugar: "0g" },
+    traceability: { farm: "Suryan Organic Farms, Punjab" },
+    reviews: [
+      { user: "Ravi", comment: "Best rice I’ve ever cooked with!" },
+      { user: "Ananya", comment: "Super aromatic and fluffy." },
+    ],
+  },
+  {
+    id: 2,
+    name: "Fresh Alphonso Mangoes",
+    alt: "Juicy Alphonso mangoes",
+    category: "Fruits and Vegetables",
+    price: 899,
+    image: "/mangoes.jpg",
+    longDescription:
+      "Handpicked Alphonso mangoes, known as the ‘King of Fruits’. Sweet, pulpy, and rich in vitamins.",
+    features: ["Naturally ripened", "No artificial chemicals", "Rich in Vitamin A & C"],
+    nutrition: { calories: 60, sugar: "14g" },
+    traceability: { farm: "Ratnagiri Orchards, Maharashtra" },
+    reviews: [
+      { user: "Sonal", comment: "So sweet, like eating sunshine!" },
+      { user: "Arjun", comment: "Fresh and delivered on time." },
+    ],
+  },
+  {
+    id: 3,
+    name: "Grass-fed Cow Milk",
+    alt: "Bottle of fresh milk",
+    category: "Meat, Seafood & Dairy",
+    price: 75,
+    image: "/milk.jpg",
+    longDescription:
+      "Fresh and creamy cow’s milk from grass-fed cattle. Pasteurized and delivered daily.",
+    features: ["Rich in calcium", "No preservatives", "Farm fresh"],
+    nutrition: { calories: 42, sugar: "5g" },
+    traceability: { farm: "Green Valley Dairy, Karnataka" },
+    reviews: [
+      { user: "Meera", comment: "My kids love the taste!" },
+      { user: "Kabir", comment: "Feels like real farm milk." },
+    ],
+  },
+  {
+    id: 4,
+    name: "Handwoven Cotton Kurta",
+    alt: "Traditional cotton kurta",
+    category: "Fashion",
+    price: 1299,
+    image: "/kurta.jpg",
+    longDescription:
+      "Handwoven cotton kurta made by rural artisans. Comfortable, breathable, and stylish.",
+    features: ["100% cotton", "Handcrafted", "Eco-friendly dyes"],
+    nutrition: { calories: "N/A", sugar: "N/A" },
+    traceability: { farm: "Crafts of India Collective" },
+    reviews: [
+      { user: "Nidhi", comment: "Soft fabric and great fit!" },
+      { user: "Rohan", comment: "Loved the craftsmanship." },
+    ],
+  },
+  {
+    id: 5,
+    name: "Herbal Green Tea",
+    alt: "Box of green tea bags",
+    category: "Wellness",
+    price: 450,
+    image: "/tea.jpg",
+    longDescription:
+      "Refreshing blend of handpicked green tea leaves and herbs for relaxation and detox.",
+    features: ["Rich in antioxidants", "Boosts metabolism", "Soothes stress"],
+    nutrition: { calories: 0, sugar: "0g" },
+    traceability: { farm: "Nilgiri Tea Estates, Tamil Nadu" },
+    reviews: [
+      { user: "Priya", comment: "Keeps me fresh all day!" },
+      { user: "Dev", comment: "Perfect for morning routine." },
+    ],
+  },
+  {
+    id: 6,
+    name: "Aloe Vera Gel",
+    alt: "Jar of aloe vera gel",
+    category: "Beauty",
+    price: 299,
+    image: "/aloe.jpg",
+    longDescription:
+      "Pure aloe vera gel for skin hydration, soothing sunburns, and natural skincare.",
+    features: ["100% natural", "No parabens", "Multi-purpose use"],
+    nutrition: { calories: "N/A", sugar: "N/A" },
+    traceability: { farm: "Desert Bloom Aloe Farms, Rajasthan" },
+    reviews: [
+      { user: "Shreya", comment: "Great for my skin routine." },
+      { user: "Tanvi", comment: "Soothes my sunburn instantly." },
+    ],
+  },
 ];
 
 export default ProductDetails;

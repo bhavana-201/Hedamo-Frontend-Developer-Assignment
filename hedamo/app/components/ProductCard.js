@@ -69,7 +69,7 @@ export default function ProductCard() {
 
             {/* Modal for displaying product details */}
             {isModalOpen && (
-                 <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur bg-opacity-90">
+                 <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/35">
                     <ProductModalView product={selectedProduct} onClose={() => setIsModalOpen(false)} />
                 </div>
             )}

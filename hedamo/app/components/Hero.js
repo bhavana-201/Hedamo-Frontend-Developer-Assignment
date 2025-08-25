@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero(){
     return(
         <>
-            <header className="fixed top-0 left-0 w-full flex font-[Poppins] text-black justify-start items-center font-bold text-[20px] px-50 py-6 bg-white shadow-md z-20">
+            <header className="fixed top-0 left-0 w-full flex font-[Poppins] text-black justify-start items-center font-bold text-[20px] px-65 py-6 bg-white shadow-md z-20">
                 <Image src= "/hedamo.png" alt="Hedamo Logo" width={100} height={50} />
             </header>
             <section className="relative w-full flex items-center justify-center overflow-hidden h-[550px]">
