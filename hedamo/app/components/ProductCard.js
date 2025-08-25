@@ -1,12 +1,48 @@
+"use client";
 import ProductDetails from "./ProductDetails";
+import ProductModalView from "./ProductModalView";
 import Image from "next/image";
-
+import {useState, useEffect} from "react";
+import { motion } from "framer-motion";
 export default function ProductCard() {
+    //to store user actions
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState("");
+
+    //function to handle the button click
+    function handleBtnClick(item){
+        setSelectedProduct(item);
+        setIsModalOpen(true);
+    }
+    useEffect( () => {
+        if(isModalOpen){
+            document.body.style.overflow = 'hidden';
+        }else{
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isModalOpen]);
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 p-6 mx-60 my-10">
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 p-6 mx-60 my-10"
+            initial="hidden"
+            animate="visible"
+            variants={{
+                hidden: {},
+                visible:{
+                    transition:{ staggerChildren:0.15}
+                }   
+            }}
+        >
             {ProductDetails.map((item) => (
-                <section key={item.id} 
+                <motion.section key={item.id} 
                     className="bg-white border border-[#4a8b71] border-[0.8px] shadow-[4px_4px_10px_0px_rgba(0,0,0,0.2)] rounded-lg overflow-hidden flex flex-col hover:scale-105 transition-transform duration-300"
+                    variants={{
+                        hidden:{y:50, opacity:0},
+                        visible:{y:0, opacity:1}
+                    }}
+                    transition={{duration:0.4,ease:"easeOut"}}
                 >
                     <div className="w-full">
                         <Image
@@ -21,13 +57,22 @@ export default function ProductCard() {
                         <a className="font-[sans-serif] text-[15px] font-bold text-[#333333] mb-2">{item.name}</a>
                         <p className="text-sm text-gray-500 mb-2">{item.category}</p>
                         <div className="flex justify-center items-center">
-                            <button className="text-center bg-[#f1cf69] text-[#333333] w-50 h-10 rounded-[10px] hover:bg-[#e0b95c]">
+                            <button className="text-center bg-[#f1cf69] text-[#333333] w-50 h-10 rounded-[10px] hover:bg-[#e0b95c]"
+                                    onClick={() => handleBtnClick(item)}    
+                            >
                                 Know More
                             </button>
                         </div>
                     </div>
-                </section>
+                </motion.section>
             ))}
-        </div>
+
+            {/* Modal for displaying product details */}
+            {isModalOpen && (
+                 <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur bg-opacity-90">
+                    <ProductModalView product={selectedProduct} onClose={() => setIsModalOpen(false)} />
+                </div>
+            )}
+        </motion.div>
     );
 }
