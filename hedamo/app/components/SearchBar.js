@@ -1,9 +1,8 @@
 "use client";
 import { Search } from "lucide-react"; 
 import { useState } from "react";
-export default function SearchBar() {
-
-  const [searchTerm, setSearchTerm] = useState("");
+import ProductDetails from "./ProductDetails";
+export default function SearchBar({ onSearchChange }) {
 
   return (
     <section className="flex justify-center items-center ">
@@ -12,6 +11,7 @@ export default function SearchBar() {
         <input
             type="search"
             placeholder="Search..."
+            onChange={(e) => onSearchChange(e.target.value)}
             className="flex-1 bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
         />
         </div>
