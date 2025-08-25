@@ -103,7 +103,7 @@ npm run dev
 
 ## 📌 Live Demo & Repository
 
-* **GitHub:** \[Your Repository Link]
+* **GitHub:** \[Repository Link](https://github.com/bhavana-201/Hedamo-Frontend-Developer-Assignment)
 * **Live Demo:** [https://hedamo-frontend-developer-assignmen-beige.vercel.app/#](https://hedamo-frontend-developer-assignmen-beige.vercel.app/#)
 
 ---
