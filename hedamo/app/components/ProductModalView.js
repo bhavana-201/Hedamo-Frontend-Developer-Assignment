@@ -1,11 +1,15 @@
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 export default function ProductModalView({ product, onClose }) {
   return (
-    <div className="flex flex-col gap-4 p-6 
+    <motion.div className="flex flex-col gap-4 p-6 
                     bg-white/30
                     w-[800px] max-h-[80vh] overflow-y-auto text-[#333333] 
-                    rounded-2xl shadow-xl relative">
+                    rounded-2xl shadow-xl relative"
+                initial={{y: 300, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{duration: 0.4}}
+              >
       
       {/* Top Section / Main Product Card */}
       <section className="flex flex-col md:flex-row gap-6 
@@ -110,6 +114,6 @@ export default function ProductModalView({ product, onClose }) {
           ))}
         </section>
       )}
-    </div>
+    </motion.div>
   );
 }
